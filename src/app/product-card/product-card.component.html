@@ -1,0 +1,12 @@
+<main class="card" (click)="productCardClicked()">
+    <img src={{productDetails.imgUrl}} alt={{productDetails.name}}>
+    <section>
+        <h4 class="card--text-heading">{{productDetails.name}}</h4>
+        <article class="card--text">
+            <p class="card--text-price">&#8377; {{finalPrice}}</p>
+            <p *ngIf="productDetails.discountPercent>0" class="card--text-striked">&#8377; {{productDetails.price}}</p>
+            <p *ngIf="productDetails.discountPercent>0" class="card--text-discount">{{productDetails.discountPercent}} %
+                Off</p>
+        </article>
+    </section>
+</main>
